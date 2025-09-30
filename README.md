@@ -47,7 +47,10 @@ gravadora-oficial/
    * Clique duas vezes no arquivo `index.html`
      ou
    * Use um servidor local:
-
+           ```bash
+     python -m http.server 8080
+     ```
+      ou
      ```bash
      npx serve .
      ```
