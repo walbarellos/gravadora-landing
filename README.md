@@ -113,37 +113,23 @@ gravadora-oficial/
 3. Commit suas alterações: `git commit -m "feat: adiciona nova música"`.
 4. Push: `git push origin feature/nome-da-feature`.
 5. Abra um **Pull Request**.
+---
+
+## 👨‍🎨 Créditos & Autoria
+
+- **Graciliano Tolentino** — Engenheiro de Software, Artista, compositor e idealizador do catálogo musical.  
+- **Willian Albarello** — Programador responsável pela arquitetura do site, integração de dados e identidade digital.  
+- **Assistente A.I. (ChatGPT)** — Apoio técnico em engenharia de software, design e documentação.  
+
+> Este projeto é fruto de colaboração criativa, unindo **arte e tecnologia** para valorizar a música brasileira.
 
 ---
 
 ## 📜 Licença
 
-Distribuído sob licença **MIT**.
+Distribuído sob licença **MIT**.  
 Veja o arquivo [`LICENSE`](LICENSE) para mais detalhes.
 
 ---
 
-````
 
----
-
-## 📄 `LICENSE` (MIT)
-```text
-MIT License
-
-Copyright (c) 2025 Gravadora Oficial
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-O texto acima deve ser incluído em todas as cópias ou partes substanciais do Software.
-
-O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIAS DE QUALQUER TIPO,
-EXPRESSAS OU IMPLÍCITAS.
-````
-
----
