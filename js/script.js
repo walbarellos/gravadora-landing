@@ -164,11 +164,17 @@ function setupEventListeners() {
 }
 
 // Filtrar músicas
+// Filtrar músicas
 function filterSongs(filter) {
   const songCards = document.querySelectorAll(".song-card");
+  const normalizedFilter = filter.toLowerCase();
+
   songCards.forEach((card) => {
+    const cardGenre = (card.dataset.genre || "").toLowerCase();
     card.style.display =
-      filter === "all" || card.dataset.genre === filter ? "block" : "none";
+      normalizedFilter === "all" || cardGenre === normalizedFilter
+        ? "block"
+        : "none";
   });
 }
 
