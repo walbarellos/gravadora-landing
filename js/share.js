@@ -2,6 +2,10 @@
 
 function shareSong(title, artist, audioUrl, albumArt) {
   const siteUrl = window.location.href;
+
+  // fallback de imagem
+  const image = albumArt && albumArt.trim() !== "" ? albumArt : "assets/share-preview.png";
+
   const shareText = `🎶 ${title} — ${artist}\nOuça agora: ${siteUrl}`;
 
   // Preferência: Web Share API (mobile e navegadores modernos)
@@ -20,31 +24,25 @@ function shareSong(title, artist, audioUrl, albumArt) {
   const existingPopup = document.querySelector(".share-popup");
   if (existingPopup) existingPopup.remove();
 
-  // Cria popup
+  // Cria popup customizado
   const popup = document.createElement("div");
   popup.className = "share-popup";
   popup.innerHTML = `
     <div class="share-popup-content">
       <h3>Compartilhar "${title}"</h3>
+      <img src="${image}" alt="Prévia do álbum" class="share-preview"/>
+      <p class="share-description">${artist}</p>
       <div class="share-buttons">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-          siteUrl
-        )}" target="_blank" title="Facebook">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(siteUrl)}" target="_blank" title="Facebook">
           <i class="fab fa-facebook"></i>
         </a>
-        <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(
-          shareText
-        )}" target="_blank" title="Twitter / X">
+        <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}" target="_blank" title="Twitter / X">
           <i class="fab fa-x-twitter"></i>
         </a>
-        <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(
-          shareText
-        )}" target="_blank" title="WhatsApp">
+        <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}" target="_blank" title="WhatsApp">
           <i class="fab fa-whatsapp"></i>
         </a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-          siteUrl
-        )}" target="_blank" title="LinkedIn">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(siteUrl)}" target="_blank" title="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </div>
@@ -87,7 +85,7 @@ function shareSong(title, artist, audioUrl, albumArt) {
       color: var(--cream, #f5f1e6);
       padding: 2rem;
       border-radius: 12px;
-      max-width: 400px;
+      max-width: 420px;
       width: 90%;
       text-align: center;
       box-shadow: 0 8px 30px rgba(0,0,0,0.5);
@@ -96,13 +94,25 @@ function shareSong(title, artist, audioUrl, albumArt) {
     .share-popup-content h3 {
       font-family: var(--font-secondary, serif);
       font-size: 1.3rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
       color: var(--warm-amber, #d9a441);
+    }
+    .share-preview {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 0.5rem 0 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+    .share-description {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      margin-bottom: 1rem;
     }
     .share-buttons {
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      gap: 1.2rem;
       margin: 1rem 0 1.5rem;
     }
     .share-buttons a {

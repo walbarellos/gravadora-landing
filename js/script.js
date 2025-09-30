@@ -59,7 +59,7 @@ function renderSongs(songs) {
   songs.forEach((song, index) => {
     const songCard = createSongCard(song, index);
     musicGrid.appendChild(songCard);
-  });
+    });
 }
 
 // Criar card de música (com capa, botão de compartilhar e áudio)
@@ -290,7 +290,13 @@ function createSongCard(song, index) {
   card.innerHTML = `
     <div class="song-image" ${bgStyle}>
       <span>${song.title}</span>
-      <button class="share-btn" onclick="shareSong('${song.title}','${song.artist}','${song.audioUrl}','${song.albumArt}')">
+      <button class="share-btn" 
+  onclick="shareSong(
+    '${song.title.replace(/'/g, "\\'")}',
+    '${song.artist.replace(/'/g, "\\'")}',
+    '${song.audioUrl}',
+    '${song.albumArt || "assets/share-preview.png"}'
+  )">
         <i class="fa-solid fa-share-nodes"></i>
       </button>
     </div>
