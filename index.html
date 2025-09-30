@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gravadora Oficial - Música com Justiça e Arte</title>
+
+  <!-- ícones youtube/spotfy/apple -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Navegação -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <h1>⚖️ Gravadora Oficial</h1>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#catalog">Catálogo</a></li>
+        <li><a href="#artists">Artistas</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+<section id="home" class="hero" style="background-image: url('capas/greve.jpg');">
+  <div class="hero-overlay"></div>
+
+  <!-- Texto principal -->
+  <div class="hero-content">
+    <h1>Música com Justiça e Arte</h1>
+    <p>Um catálogo cultural que une tradição e modernidade</p>
+    <button class="cta-button" onclick="document.getElementById('catalog').scrollIntoView({behavior: 'smooth'})">
+      🎧 Ouça os Lançamentos
+    </button>
+  </div>
+
+  <!-- Player em destaque -->
+  <div class="hero-audio-player">
+    <div class="featured-track">
+      <img src="capas/greve.jpg" alt="Capa do lançamento" class="featured-cover">
+      <h3>Lançamento em destaque</h3>
+      <div class="track-info">
+        <span class="track-title">Carregando...</span>
+        <span class="track-artist">Carregando...</span>
+      </div>
+      <audio id="featured-audio" controls>
+        <source src="" type="audio/mpeg" />
+        Seu navegador não suporta o player de áudio.
+      </audio>
+    </div>
+  </div>
+</section>
+
+  <!-- Catálogo -->
+  <section id="catalog" class="catalog">
+    <div class="container">
+      <h2>🎼 Catálogo de Músicas</h2>
+
+      <!-- Filtros -->
+      <div class="catalog-filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="samba">Samba</button>
+        <button class="filter-btn" data-filter="mpb">MPB</button>
+        <button class="filter-btn" data-filter="bossa">Bossa Nova</button>
+      </div>
+
+      <!-- Busca -->
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Buscar músicas ou artistas..." />
+      </div>
+
+      <!-- Grid de músicas -->
+      <div id="music-grid" class="music-grid">
+        <!-- Cards serão renderizados via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Artistas -->
+  <section id="artists" class="artists">
+    <div class="container">
+      <h2>🎤 Artistas</h2>
+      <div id="artists-grid" class="artists-grid">
+        <!-- Renderização dinâmica -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="about" class="about">
+    <div class="about-overlay"></div>
+    <div class="about-content">
+      <h2>Sobre a Gravadora</h2>
+      <p>
+        A Gravadora Oficial nasceu com a missão de valorizar a música brasileira,
+        fortalecendo artistas independentes e promovendo a cultura popular.
+      </p>
+      <p>
+        Inspirados por rodas de samba, palcos de bares e a energia das ruas,
+        construímos um espaço onde tradição e inovação se encontram.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>📩 Contato</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Fale Conosco</h3>
+          <p><strong>Email:</strong> contato@gravadoraoficial.com</p>
+          <p><strong>Telefone:</strong> (11) 99999-9999</p>
+        </div>
+        <form class="contact-form">
+          <input type="text" placeholder="Seu nome" required />
+          <input type="email" placeholder="Seu email" required />
+          <textarea placeholder="Mensagem" rows="5" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      
+      <!-- Logo / Descrição -->
+      <div class="footer-section">
+        <h3>⚖️ Gravadora Oficial</h3>
+        <p>Música, cultura e justiça social.</p>
+      </div>
+
+      <!-- Jurídico -->
+      <div class="footer-section">
+        <h4>Jurídico</h4>
+        <ul>
+          <li><a href="#terms">Termos de Uso</a></li>
+          <li><a href="#copyright">Direitos Autorais</a></li>
+        </ul>
+      </div>
+
+      <!-- Redes sociais -->
+      <div class="footer-section">
+        <h4>Conecte-se</h4>
+        <ul>
+          <li><a href="#"><i class="fa-brands fa-spotify"></i> Spotify</a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+          <li><a href="#"><i class="fa-brands fa-apple"></i> Apple Music</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Gravadora Oficial — Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+  <!-- Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>

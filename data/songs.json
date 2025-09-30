@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "title": "Feliz 31 de março!",
+    "artist": "Graciliano Tolentino",
+    "genre": "MPB",
+    "audioUrl": "musicas/SambaElétrica.mp3",
+    "albumArt": "capas/SambaCadeiraEletrica.png",
+    "releaseDate": "2025-01-15"
+  },
+
+  {
+    "id": 2,
+    "title": "Greve na Bahia",
+    "artist": "Graciliano Tolentino",
+    "genre": "Samba",
+    "audioUrl": "musicas/GreveNaBahia.mp3",
+    "albumArt": "capas/GreveNaBahia.png",
+    "releaseDate": "2025-01-20"
+  },
+
+  {
+    "id": 2,
+    "title": "Apartamento 501",
+    "artist": "Graciliano Tolentino",
+    "genre": "Samba",
+    "audioUrl": "musicas/Apartamento501.mp3",
+    "albumArt": "capas/Apartamento501.png",
+    "releaseDate": "2025-01-20"
+  },
+
+    {
+    "id": 2,
+    "title": "República de Corno",
+    "artist": "Graciliano Tolentino",
+    "genre": "Samba",
+    "audioUrl": "musicas/RepublicaCorno.mp3",
+    "albumArt": "capas/RepublicaCorno.png",
+    "releaseDate": "2025-01-20"
+  }
+] 
