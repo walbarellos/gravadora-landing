@@ -57,35 +57,57 @@ body {
   letter-spacing: 1px;
 }
 
+/* ===== Menu ===== */
 .nav-menu {
   display: flex;
+  align-items: center;
   list-style: none;
-  gap: 2rem;
+  gap: 2rem; /* espaçamento horizontal entre os itens */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  display: inline-block;
 }
 
 .nav-menu a {
+  position: relative;
+  display: inline-block;
   color: var(--cream);
   text-decoration: none;
   font-weight: 500;
+  padding: 0.2rem 0;
   transition: color 0.3s ease;
+}
+
+/* Efeito dourado animado */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--warm-amber), var(--dark-amber));
+  transition: width 0.35s ease;
+  border-radius: 2px;
 }
 
 .nav-menu a:hover {
   color: var(--warm-amber);
 }
 
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
+.nav-menu a:hover::after {
+  width: 100%;
 }
 
-.nav-toggle span {
-  width: 25px;
-  height: 3px;
-  background: var(--cream);
-  margin: 3px 0;
-  transition: 0.3s;
+.nav-menu a.active {
+  color: var(--warm-amber);
+}
+
+.nav-menu a.active::after {
+  width: 100%;
 }
 
 /* ===== Hero ===== */
