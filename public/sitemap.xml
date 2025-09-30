@@ -1,35 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
-  <!-- Página canônica (SPA) -->
-  <url>
-    <loc>https://gravadora-landing.vercel.app/</loc>
-    <lastmod>2025-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-
-    <!-- Sinais de imagem da sua home (ajuda no Image Search) -->
-    <image:image>
-      <image:loc>https://gravadora-landing.vercel.app/social-card.png</image:loc>
-      <image:title>Gravadora Oficial — Oficina 404</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://gravadora-landing.vercel.app/capas/SambaCadeiraEletrica.png</image:loc>
-      <image:title>Feliz 31 de março!</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://gravadora-landing.vercel.app/capas/GreveNaBahia.png</image:loc>
-      <image:title>Greve na Bahia</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://gravadora-landing.vercel.app/capas/Apartamento501.png</image:loc>
-      <image:title>Apartamento 501</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://gravadora-landing.vercel.app/capas/RepublicaCorno.png</image:loc>
-      <image:title>República de Corno</image:title>
-    </image:image>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://gravadora-landing.vercel.app/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://gravadora-landing.vercel.app/catalog</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://gravadora-landing.vercel.app/artists</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://gravadora-landing.vercel.app/about</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://gravadora-landing.vercel.app/contact</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
 </urlset>
