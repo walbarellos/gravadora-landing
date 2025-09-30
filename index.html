@@ -12,6 +12,7 @@
   
   <!-- CSS principal -->
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/hero.css" />
 </head>
 <body>
   <!-- Navegação -->
@@ -35,16 +36,18 @@
     </div>
   </nav>
 
-  <!-- Hero -->
+<!-- Hero -->
 <section id="home" class="hero" style="background-image: url('capas/greve.jpg');">
   <div class="hero-overlay"></div>
 
   <!-- Texto principal -->
   <div class="hero-content">
-    <h1>Música com Justiça e Arte</h1>
+    <h1>
+      Música com <span class="highlight">Justiça</span> e <span class="highlight">Arte</span>
+    </h1>
     <p>Um catálogo cultural que une tradição e modernidade</p>
     <button class="cta-button" onclick="document.getElementById('catalog').scrollIntoView({behavior: 'smooth'})">
-      🎧 Ouça os Lançamentos
+      <i class="fa-solid fa-headphones"></i> Ouça os Lançamentos
     </button>
   </div>
 

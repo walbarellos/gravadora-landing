@@ -1,0 +1,174 @@
+/* ===== Hero Artistico ===== */
+.hero {
+  position: relative;
+  background: url('../capas/greve.jpg') center/cover no-repeat;
+  color: var(--cream);
+  padding: 160px 40px 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.hero-overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(27,15,10,0.95), rgba(0,0,0,0.85));
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  animation: slideInLeft 1s ease forwards;
+}
+
+.hero-content h1 {
+  font-family: var(--font-secondary);
+  font-size: 3.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-content h1 .highlight {
+  background: linear-gradient(90deg, var(--warm-amber), var(--dark-amber));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+  animation: shine 5s infinite linear;
+  background-size: 200% auto;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-button {
+  background: var(--warm-amber);
+  color: var(--deep-brown);
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  box-shadow: 0 0 20px rgba(217,164,65,0.6);
+}
+
+.cta-button i {
+  font-size: 1.3rem;
+}
+
+.cta-button:hover {
+  background: var(--dark-amber);
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(217,164,65,0.9);
+}
+
+.cta-button:focus {
+  outline: none;
+  animation: pulse 1.5s infinite;
+}
+
+/* Player em destaque com moldura artística */
+.hero-audio-player {
+  position: relative;
+  z-index: 1;
+  background: rgba(20,10,5,0.85);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid var(--warm-amber);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+  text-align: center;
+  animation: fadeInRight 1.2s ease forwards;
+  transition: transform 0.3s ease;
+}
+
+.hero-audio-player:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 35px rgba(217,164,65,0.6);
+}
+
+.hero-audio-player img.featured-cover {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 20px rgba(217,164,65,0.5);
+  transition: transform 0.3s ease;
+}
+
+.hero-audio-player img.featured-cover:hover {
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.featured-track h3 {
+  color: var(--warm-amber);
+  margin-bottom: 0.8rem;
+  font-family: var(--font-secondary);
+  font-size: 1.3rem;
+}
+
+.track-info {
+  margin-bottom: 1rem;
+}
+
+.track-title {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.track-artist {
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+/* ===== Animações ===== */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 15px rgba(217,164,65,0.5); }
+  50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(217,164,65,0.9); }
+  100% { transform: scale(1); box-shadow: 0 0 15px rgba(217,164,65,0.5); }
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 120px 20px 80px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-audio-player {
+    margin-top: 2rem;
+  }
+}
