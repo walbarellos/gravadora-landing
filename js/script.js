@@ -201,11 +201,18 @@ function setupFeaturedTrack() {
     const trackTitle = document.querySelector(".track-title");
     const trackArtist = document.querySelector(".track-artist");
     const featuredAudio = document.getElementById("featured-audio");
+    const featuredCover = document.querySelector(".featured-cover");
 
     if (trackTitle && trackArtist && featuredAudio) {
       trackTitle.textContent = featuredSong.title;
       trackArtist.textContent = featuredSong.artist;
       featuredAudio.src = featuredSong.audioUrl;
+
+      // atualiza a capa se existir
+      if (featuredCover && featuredSong.albumArt) {
+        featuredCover.src = featuredSong.albumArt;
+        featuredCover.alt = `Capa de ${featuredSong.title}`;
+      }
     }
   }
 }
