@@ -62,7 +62,7 @@ function renderSongs(songs) {
   });
 }
 
-// Criar card de música (com capa como fundo)
+// Criar card de música (com capa, botão de compartilhar e áudio)
 function createSongCard(song, index) {
   const card = document.createElement("div");
   card.className = "song-card fade-in";
@@ -72,13 +72,20 @@ function createSongCard(song, index) {
     ? `style="background-image: url('${song.albumArt}');"`
     : `style="background: linear-gradient(135deg, #3a1c0f, #0f0704);"`;
 
+  // Encode seguro para evitar quebrar aspas em atributos
+  const safeTitle = song.title.replace(/'/g, "\\'");
+  const safeArtist = song.artist.replace(/'/g, "\\'");
+
   card.innerHTML = `
     <div class="song-image" ${bgStyle}>
-      ${
-        !song.albumArt
-          ? `<span>♪</span>`
-          : `<span class="song-overlay">${song.title}</span>`
-      }
+      <span class="song-overlay">${song.title}</span>
+      <button 
+        class="share-btn" 
+        title="Compartilhar ${song.title}"
+        onclick="shareSong('${safeTitle}','${safeArtist}','${song.audioUrl}','${song.albumArt || ''}')"
+      >
+        <i class="fa-solid fa-share-nodes"></i>
+      </button>
     </div>
     <div class="song-info">
       <h3>${song.title}</h3>
@@ -270,3 +277,35 @@ function setupAudioPlayers() {
 
 // Iniciar app
 document.addEventListener("DOMContentLoaded", loadData);
+
+function createSongCard(song, index) {
+  const card = document.createElement("div");
+  card.className = "song-card fade-in";
+  card.dataset.genre = song.genre;
+
+  const bgStyle = song.albumArt
+    ? `style="background-image: url('${song.albumArt}');"`
+    : `style="background: linear-gradient(135deg, #3a1c0f, #0f0704);"`;
+
+  card.innerHTML = `
+    <div class="song-image" ${bgStyle}>
+      <span>${song.title}</span>
+      <button class="share-btn" onclick="shareSong('${song.title}','${song.artist}','${song.audioUrl}','${song.albumArt}')">
+        <i class="fa-solid fa-share-nodes"></i>
+      </button>
+    </div>
+    <div class="song-info">
+      <h3>${song.title}</h3>
+      <p class="artist">${song.artist}</p>
+      <span class="genre">${song.genre}</span>
+      <audio class="song-audio" controls preload="none">
+        <source src="${song.audioUrl}" type="audio/mpeg">
+        Seu navegador não suporta o player de áudio.
+      </audio>
+    </div>
+  `;
+
+  card.style.animationDelay = `${index * 0.1}s`;
+
+  return card;
+}
