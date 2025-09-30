@@ -1,0 +1,19 @@
+{
+  "name": "gravadora-landing",
+  "version": "1.0.0",
+  "description": "Landing page da Gravadora Oficial - Música com Justiça e Arte",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Nada para compilar, apenas arquivos estáticos.'",
+    "start": "vercel dev"
+  },
+  "keywords": [
+    "gravadora",
+    "musica",
+    "landing",
+    "oficina404"
+  ],
+  "author": "Willian Albarello",
+  "license": "MIT"
+}
+
