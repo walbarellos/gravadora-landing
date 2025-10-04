@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Detalhes do produto musical selecionado na loja da gravadora Oficina 404." />
+
+    <title>Produto • Oficina 404</title>
+
+    <!-- SEO Social -->
+    <meta property="og:title" content="Produto - Gravadora Oficina 404" />
+    <meta property="og:description" content="Veja detalhes da faixa, ouça o preview e adicione ao carrinho." />
+    <meta property="og:image" content="https://gravadora-landing.vercel.app/assets/social-card.png?v=2" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gravadora-landing.vercel.app/produto.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/brand.css" />
+    <link rel="stylesheet" href="css/product.css" />
+
+    <!-- Header/Footer Loader -->
+    <script defer src="js/loadHeaderFooter.js"></script>
+    <!-- Script de produto (detalhe e carrinho) -->
+    <script defer src="js/product.js"></script>
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <main class="product-page">
+      <section class="product-detail" aria-live="polite">
+        <div class="product-cover">
+          <img id="productImage" src="" alt="Capa da faixa" />
+        </div>
+
+        <div class="product-info">
+          <h1 id="productTitle">Nome da faixa</h1>
+          <p id="productArtist">Artista</p>
+          <p id="productGenre" class="tag">Gênero</p>
+
+          <audio id="productAudio" controls>
+            <source src="" type="audio/mpeg" />
+            Seu navegador não suporta o elemento <code>audio</code>.
+          </audio>
+
+          <button id="addToCartBtn" class="btn-primary">Adicionar ao Carrinho</button>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+  </body>
+</html>

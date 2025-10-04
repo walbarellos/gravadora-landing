@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Loja oficial da gravadora Oficina 404. Conheça músicas, álbuns e arte independente com justiça social." />
+
+    <title>Loja • Oficina 404</title>
+
+    <!-- SEO Social -->
+    <meta property="og:title" content="Loja - Gravadora Oficina 404" />
+    <meta property="og:description" content="🎶 Descubra músicas, álbuns e arte com justiça social. Visite nossa loja cultural." />
+    <meta property="og:image" content="https://gravadora-landing.vercel.app/assets/social-card.png?v=2" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gravadora-landing.vercel.app/loja.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/brand.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/catalog.css" />
+
+    <!-- Header/Footer Loader -->
+    <script defer src="js/loadHeaderFooter.js"></script>
+    <!-- Catálogo dinâmico -->
+    <script defer src="js/catalog.js"></script>
+  </head>
+
+  <body>
+    <!-- Header dinâmico -->
+    <div id="header"></div>
+
+    <main class="catalog-page">
+      <section class="catalog-hero">
+        <h2 class="catalog-title">Nosso Catálogo</h2>
+        <p class="catalog-subtitle">Música, arte e cultura com identidade.</p>
+
+        <div class="catalog-filters">
+          <input type="text" id="searchInput" placeholder="Buscar por artista, título ou tag" aria-label="Buscar no catálogo" />
+
+          <div id="genreFilters" class="filter-buttons" aria-label="Filtro por gênero musical">
+            <!-- Botões de filtro serão renderizados dinamicamente -->
+          </div>
+        </div>
+      </section>
+
+      <section id="catalogContainer" class="catalog-grid" aria-live="polite">
+        <!-- Cards renderizados via catalog.js -->
+      </section>
+    </main>
+
+    <!-- Footer dinâmico -->
+    <div id="footer"></div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Carrinho de compras da loja musical da gravadora Oficina 404." />
+
+    <title>Carrinho • Oficina 404</title>
+
+    <!-- SEO Social -->
+    <meta property="og:title" content="Carrinho - Gravadora Oficina 404" />
+    <meta property="og:description" content="Revise seus itens e finalize a compra com facilidade e segurança." />
+    <meta property="og:image" content="https://gravadora-landing.vercel.app/assets/social-card.png?v=2" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gravadora-landing.vercel.app/carrinho.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/brand.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+
+    <!-- Header/Footer Loader -->
+    <script defer src="js/loadHeaderFooter.js"></script>
+    <!-- Script do Carrinho -->
+    <script defer src="js/cart.js"></script>
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <main class="cart-page">
+      <section class="cart-container" aria-labelledby="carrinhoTitulo">
+        <h1 id="carrinhoTitulo">Seu Carrinho</h1>
+
+        <div id="cartItems" class="cart-items">
+          <!-- Itens serão carregados via JS -->
+        </div>
+
+        <div class="cart-summary">
+          <p>Total: <span id="cartTotal">R$ 0,00</span></p>
+          <a href="checkout.html" class="btn-primary">Finalizar Compra</a>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+  </body>
+</html>

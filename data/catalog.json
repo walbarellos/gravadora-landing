@@ -1,0 +1,21 @@
+// ./data/catalog.json
+[
+  {
+    "id": "001",
+    "title": "Nasce o Rio",
+    "artist": "Graciliano Tolentino",
+    "genre": "samba",
+    "cover": "assets/capas/nasce-o-rio.jpg",
+    "audio": "assets/audios/nasce-o-rio.mp3",
+    "tags": ["oxum", "aboto", "instrumental"]
+  },
+  {
+    "id": "002",
+    "title": "Mel que Adoça e Queima",
+    "artist": "Graciliano Tolentino",
+    "genre": "ijexá",
+    "cover": "assets/capas/mel-que-queima.jpg",
+    "audio": "assets/audios/mel-que-queima.mp3",
+    "tags": ["orixá", "ijexa", "ancestral"]
+  }
+]
